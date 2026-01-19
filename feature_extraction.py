@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def extract_features_from_df(responses_labeled_df, full_url_len=False, use_keepalive_timeout=True, use_dns_time_2=False, top_domains_limit=20000):
+def extract_features_from_df(responses_labeled_df, full_url_len=False, use_keepalive_timeout=True, use_dns_time_2=False):
 	responses_labeled_partial_df = responses_labeled_df.drop_duplicates('url').copy()
 	responses_labeled_partial_df["content-type"] = responses_labeled_partial_df["content-type"].astype('category')
 	responses_labeled_partial_df["content-type_cat"] = responses_labeled_partial_df["content-type"].cat.codes
@@ -46,4 +46,4 @@ def extract_features_from_df(responses_labeled_df, full_url_len=False, use_keepa
 	responses_labeled_partial_df['www_count'] = responses_labeled_partial_df["url"].apply(lambda x: x.count("www."))
 
   return responses_labeled_partial_df
-
+  
