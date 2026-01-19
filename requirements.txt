@@ -1,0 +1,9 @@
+# requirements.txt
+pandas
+requests
+subprocess
+datetime
+socket
+sklearn
+xgboost
+catboost
