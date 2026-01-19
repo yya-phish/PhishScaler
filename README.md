@@ -1,7 +1,6 @@
 # PhishScaler
 
-Network and content based phishing detection framework.
-
+PhishScaler is a phishing detection framework, based on the collection of network-based features, spanning across the different levels of the network stack (from the network and transport layers to the applicative layer), as well as features extracted from the website’s content metadata and the content itself.
 
 ## Getting Started
 
