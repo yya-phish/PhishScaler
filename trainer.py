@@ -42,10 +42,11 @@ def train_catboost(X_train, y_train, X_test=None, y_test=None, iterations=DEFAUL
 	
 def print_model_metrics(clf, X_train, y_train, X_test=None, y_test=None, digits_precision=3):
 	print("Features used:")
-  print(list(X_test.columns))
+	print(list(X_test.columns))
 	print("Train:")
 	print(metrics.classification_report(y_train, clf.predict(X_train), digits=digits_precision))
 	if X_test:
 		y_pred = clf.predict(X_test)
 		print("Test:")
 		print(metrics.classification_report(y_test, y_pred, digits=digits_precision))
+  
