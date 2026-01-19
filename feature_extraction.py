@@ -46,3 +46,4 @@ def extract_features_from_df(responses_labeled_df, full_url_len=False, use_keepa
 	responses_labeled_partial_df['www_count'] = responses_labeled_partial_df["url"].apply(lambda x: x.count("www."))
 
   return responses_labeled_partial_df
+
